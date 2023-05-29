@@ -130,6 +130,7 @@
                     senhaCorreta = true;
                 } else {
                     alert("Senha incorreta, tente novamente.");
+                    fazer_transferencia()
                 }
                 var contadestino = prompt("Digite o número da conta de destino:");
                 var valor_transferencia = Number(prompt("Digite o valor que deseja transferir:"));
@@ -142,8 +143,8 @@
                     fazer_transferencia();
                 } else {
                     saldo -= valor_transferencia;
-                    alert(`Transferência de R$${valor_transferencia} realizada com sucesso para a conta ${contadestino}. Saldo restante: R$${saldo}`);
-                    inicio();
+                    alert(`Transferência de R$${valor_transferencia} realizada com sucesso para a conta ${contadestino}.`);
+                ver_saldo()
 
                 }
             }
